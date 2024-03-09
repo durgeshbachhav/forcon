@@ -1,0 +1,66 @@
+/**
+ * Axial
+ * Axial Construct is a universal template for factories, industry, construction, architecture, factories, mechanics, energy
+ * Exclusively on https://1.envato.market/axial-html
+ *
+ * @encoding        UTF-8
+ * @version         1.0.5
+ * @copyright       (C) 2018 - 2023 Merkulove ( https://merkulov.design/ ). All rights reserved.
+ * @license         Envato License https://1.envato.market/KYbje
+ * @contributors    Lilith Lamber (winter.rituel@gmail.com)
+ * @support         help@merkulov.design
+ **/
+// --- pagination component ---
+
+.pagination {
+    margin: 60px 0 80px;
+
+    &_control {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+
+        &[aria-disabled="true"] {
+            border: $card;
+            color: #C8C8C8;
+            pointer-events: none;
+        }
+    }
+
+    &_list {
+        display: flex;
+        margin: 0 15px;
+        gap: 15px;
+
+        &-item {
+            &_link {
+                color: $gray;
+                transition: all .3s ease-in-out;
+
+                &:hover,
+                &:focus,
+                &.current {
+                    color: $blackalt;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+// --- media queries ---
+
+// mobile xs tablet
+@media screen and (min-width: 567.98px) {
+    .pagination_list {
+        gap: 30px;
+        margin: 0 30px;
+    }
+}
+
+// tablet landscape
+@media screen and (min-width: 1023.98px) {
+    .pagination {
+        margin-bottom: 0;
+    }
+}
